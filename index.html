@@ -38,7 +38,7 @@ body {
   background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 45%, var(--cream) 100%);
   color: var(--ink); font-family: var(--font-body); font-size: 18px; line-height: 1.6;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 18px 56px; position: relative; overflow-x: hidden; min-height: 100%;
+  padding-block: 18px 96px; position: relative; overflow-x: hidden; min-height: 100%;
 }
 .roses { position: absolute; top: 0; right: 0; width: min(46vw, 260px); pointer-events: none; z-index: 0;
   -webkit-mask-image: radial-gradient(120% 120% at 100% 0%, #000 55%, transparent 80%); mask-image: radial-gradient(120% 120% at 100% 0%, #000 55%, transparent 80%); }
@@ -97,6 +97,15 @@ body.en .steps ul.sub[lang="hi"], body:not(.en) .steps ul.sub[lang="en"] { displ
 .warn ul, .done ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; }
 .warn li::marker, .done li::marker { color: var(--magenta); }
 .done b, .warn b { color: var(--magenta-deep); }
+
+.help { background: var(--panel); border: 1px solid var(--line); border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.help p { margin: 0; }
+.wa-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #128c4a; color: #fff; text-decoration: none; font-weight: 600; border-radius: 999px; padding: 12px 20px; font-size: 1.05rem; }
+.wa-btn svg { width: 24px; height: 24px; flex: none; }
+.wa-num { font-family: var(--font-bold); font-weight: 600; color: var(--magenta); letter-spacing: 0.02em; user-select: all; text-align: center; }
+.wa-float { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 20;
+  width: 56px; height: 56px; border-radius: 50%; background: #128c4a; color: #fff; display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0,0,0,.22); }
+.wa-float svg { width: 30px; height: 30px; }
 .signoff { text-align: center; font-family: var(--font-script); color: var(--magenta); font-size: 2rem; line-height: 1.1; margin: 4px 0 0; }
 footer .copyright { margin-top: 6px; }
 footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
@@ -107,6 +116,7 @@ footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
 <body>
 <img class="roses" src="roses.jpg" alt="">
 <img class="roses-b" src="roses-bottom.jpg" alt="">
+<a class="wa-float" href="https://wa.me/919891353781?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20Raj%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20Herbalife%20%E0%A4%B0%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B6%E0%A4%A8%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AE%E0%A4%A6%E0%A4%A6%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4" target="_blank" rel="noopener" aria-label="WhatsApp Raj Varma"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></svg></a>
 <div class="wrap">
   <div class="top">
     <span></span>
@@ -220,6 +230,16 @@ footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
     </ol>
   </section>
 
+  <section class="help">
+    <h2 lang="hi">कोई परेशानी? मुझसे WhatsApp पर बात करें</h2>
+    <h2 lang="en">Stuck? Message me on WhatsApp</h2>
+    <p lang="hi">रजिस्ट्रेशन में कहीं भी अटकें, OTP न आए, या कोई सवाल हो, तो सीधे मुझे मैसेज करें। मैं मदद कर दूँगी।</p>
+    <p lang="en">If you get stuck anywhere, the OTP doesn't arrive, or you have any question, just message me. I'll help you.</p>
+    <a class="wa-btn" lang="hi" href="https://wa.me/919891353781?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20Raj%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20Herbalife%20%E0%A4%B0%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B6%E0%A4%A8%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AE%E0%A4%A6%E0%A4%A6%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></svg><span>WhatsApp पर मैसेज करें</span></a>
+    <a class="wa-btn" lang="en" href="https://wa.me/919891353781?text=Hello%20Raj%20ji%2C%20I%20need%20help%20with%20my%20Herbalife%20sign-up." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></svg><span>Message on WhatsApp</span></a>
+    <div class="wa-num">Raj Varma · +91 98913 53781</div>
+  </section>
+
   <section class="done">
     <h2 lang="hi">रजिस्ट्रेशन के बाद</h2>
     <h2 lang="en">After you sign up</h2>
@@ -239,8 +259,8 @@ footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
       <li lang="en">The sponsor is very hard to change later, so always check the name.</li>
       <li lang="hi">रजिस्ट्रेशन खुद करें। अपना OTP, पासवर्ड या PIN किसी को न बताएँ।</li>
       <li lang="en">Do the sign-up yourself. Never tell anyone your OTP, password or PIN.</li>
-      <li lang="hi">अटक जाएँ तो Herbalife हेल्पलाइन: <b>080-40311444</b> (सोम–शनि, सुबह 10 से शाम 6)</li>
-      <li lang="en">Stuck? Herbalife helpline: <b>080-40311444</b> (Mon–Sat, 10 am – 6 pm)</li>
+      <li lang="hi">Herbalife की आधिकारिक हेल्पलाइन: <b>080-40311444</b> (सोम–शनि, सुबह 10 से शाम 6)</li>
+      <li lang="en">Herbalife official helpline: <b>080-40311444</b> (Mon–Sat, 10 am – 6 pm)</li>
     </ul>
   </section>
 
@@ -260,6 +280,7 @@ footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
     b.classList.toggle('en', l === 'en');
     hi.setAttribute('aria-pressed', String(l === 'hi')); en.setAttribute('aria-pressed', String(l === 'en'));
     document.documentElement.lang = l;
+    const fl = document.querySelector('.wa-float'); if (fl) fl.href = 'https://wa.me/919891353781?text=' + (l === 'en' ? 'Hello%20Raj%20ji%2C%20I%20need%20help%20with%20my%20Herbalife%20sign-up.' : '%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20Raj%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20Herbalife%20%E0%A4%B0%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B6%E0%A4%A8%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AE%E0%A4%A6%E0%A4%A6%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4');
     try { localStorage.setItem('join-lang', l); } catch (e) {}
   }
   hi.addEventListener('click', () => set('hi')); en.addEventListener('click', () => set('en'));
